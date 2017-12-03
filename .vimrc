@@ -1,21 +1,17 @@
-set number
-set linebreak
-set showbreak=+++
-set textwidth=100
-set showmatch
-set visualbell
-set hlsearch
-set smartcase
-set ignorecase
-set incsearch
-set autoindent
-set expandtab
-set shiftwidth=2
-set smartindent
-set smarttab
-set softtabstop=2
-set ruler
-set undolevels=1000
+syntax on
+set nu
 set backspace=indent,eol,start
-syntax enable
-set so=7
+set hlsearch
+hi Search ctermbg=LightGrey
+
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Indentation of 2 spaces
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=2
+" when indenting with '>', use 4 spaces width
+set shiftwidth=2
+" On pressing tab, insert 4 spaces
+set expandtab
